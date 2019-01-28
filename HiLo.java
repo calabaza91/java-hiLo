@@ -17,11 +17,13 @@ public class HiLo {
 			//System.out.println(randNum);
 			
 			int guess = 0;
+			int numTries = 0;
 			
 			while(guess != randNum) {
 				System.out.println("Guess a number between 1 and 100:");
 				
 				guess = scan.nextInt();
+				numTries++;
 				
 				if (guess > randNum) {
 					System.out.println(guess + " is too high! Guess again.");
@@ -31,6 +33,7 @@ public class HiLo {
 				}
 				else {
 					System.out.println("Yay! " + guess + " is the number!");
+					System.out.println("It took you " + numTries + " tries.");
 				}
 			} //End of while loop
 			
